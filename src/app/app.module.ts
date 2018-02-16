@@ -8,6 +8,7 @@ import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './roba-sotto/home/home.component';
 import { ListComponent } from './roba-sotto/list/list.component';
 import { EditComponent } from './roba-sotto/edit/edit.component';
+import { PortalistaService } from './portalista.service';
 
 
 @NgModule({
@@ -21,7 +22,7 @@ import { EditComponent } from './roba-sotto/edit/edit.component';
   imports: [
     BrowserModule
   ],
-  providers: [HeaderService],
+  providers: [HeaderService,PortalistaService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
