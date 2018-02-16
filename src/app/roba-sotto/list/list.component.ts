@@ -1,6 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Game } from '../../game';
-import { PortalistaService } from '../../portalista.service';
 import { ListService } from '../../list.service';
 
 @Component({
@@ -16,8 +15,4 @@ export class ListComponent {
     
     this.items=portaliste.getGameList();
   }
-  /*
-selectItem(item: Game) {
-  this.portaliste.changeSubject(item);
-}*/
 }
