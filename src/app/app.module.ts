@@ -9,6 +9,7 @@ import { HomeComponent } from './roba-sotto/home/home.component';
 import { ListComponent } from './roba-sotto/list/list.component';
 import { EditComponent } from './roba-sotto/edit/edit.component';
 import { PortalistaService } from './portalista.service';
+import { ListService } from './list.service';
 
 
 @NgModule({
@@ -22,7 +23,7 @@ import { PortalistaService } from './portalista.service';
   imports: [
     BrowserModule
   ],
-  providers: [HeaderService,PortalistaService],
+  providers: [HeaderService,PortalistaService,ListService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

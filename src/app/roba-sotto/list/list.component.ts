@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Game } from '../../game';
 import { PortalistaService } from '../../portalista.service';
+import { ListService } from '../../list.service';
 
 @Component({
   selector: 'app-list',
@@ -8,11 +9,15 @@ import { PortalistaService } from '../../portalista.service';
   styleUrls: ['./list.component.css']
 })
 export class ListComponent {
-
-  games: Game[]=[];
+@Input()
+  items: Game[]=[];
   
-  constructor(private portaliste :PortalistaService){}
+  constructor(private portaliste :ListService){
+    
+    this.items=portaliste.getGameList();
+  }
+  /*
 selectItem(item: Game) {
   this.portaliste.changeSubject(item);
-}
+}*/
 }
