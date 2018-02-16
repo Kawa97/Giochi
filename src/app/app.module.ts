@@ -8,7 +8,6 @@ import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './roba-sotto/home/home.component';
 import { ListComponent } from './roba-sotto/list/list.component';
 import { EditComponent } from './roba-sotto/edit/edit.component';
-import { PortalistaService } from './portalista.service';
 import { ListService } from './list.service';
 
 
@@ -23,7 +22,7 @@ import { ListService } from './list.service';
   imports: [
     BrowserModule
   ],
-  providers: [HeaderService,PortalistaService,ListService],
+  providers: [HeaderService,ListService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
